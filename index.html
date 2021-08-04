@@ -5,30 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Font Awesome Downloaded -->
+    <link rel="stylesheet" href="all.min.css">
+
     <link rel="stylesheet" href="./style.css" />
 
     <title>Lucky Birthday</title>
   </head>
 
   <body>
-    <h1>Is your birthday Lucky?</h1>
-
-    <p class="github"><a href="https://github.com/himadri2110/neoG-markEleven" target="_blank">GitHub Repo</a></p>
+    <header>
+		<h1>Is your birthday Lucky?</h1>
+		<p class="github"><a href="https://github.com/himadri2110/neoG-markEleven" target="_blank">GitHub Repo</a></p>	
+    </header>
 
     <main>
-        <div class="bdate">
-            <p>Enter your birthdate(only digits)</p>
-            <input type="date" id="input-date" required/>
-        </div>
-    
-        <div class="lucky">
-            <p>Enter your lucky number</p>
-            <input type="number" id="input-lucky" required/>
-        </div>
-    
-        <button id="check-btn">Check</button>
+      <p class="privacy">We won't store your personal details.<i class="fa fa-times"></i></p>
 
-        <h3 id="result">--Result will be displayed here--</h3>
+      <form id="form">
+        <div class="bdate">
+          <p>Enter your birthdate(only digits)</p>
+          <input type="date" id="input-date" required />
+        </div>
+
+        <div class="lucky">
+          <p>Enter your lucky number</p>
+          <input type="number" id="input-lucky" min="0" required />
+        </div>
+
+        <button type="submit">Check</button>
+      </form>
+
+      <h3 id="result"></h3>
     </main>
 
     <footer>
