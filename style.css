@@ -74,11 +74,14 @@ button {
 	width: 40%;
 }
 
+lottie-player {
+	margin: auto;
+}
+
 #result {
 	display: none;
 	font-size: 1rem;
 }
-
 
 footer {
 	margin-top: auto;

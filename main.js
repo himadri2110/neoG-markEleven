@@ -2,8 +2,12 @@ let inputDate = document.querySelector("#input-date");
 let inputLucky = document.querySelector("#input-lucky");
 let formDate = document.querySelector("#form");
 let resultDiv = document.querySelector("#result");
+
+
 let icon = document.querySelector(".fa");
 let privacyDiv = document.querySelector(".privacy");
+let happyAnimationsDiv = document.querySelector('.happy-animation');
+let sadAnimationsDiv = document.querySelector('.sad-animation');
 
 icon.addEventListener("click", () => {
 	privacyDiv.style.display = "none";
@@ -23,10 +27,16 @@ form.addEventListener("submit", (e) => {
 	if (sum % inputLucky.value === 0) {
 		resultDiv.style.display = 'block';
 
+		happyAnimationsDiv.style.display = 'block';
+		sadAnimationsDiv.style.display = 'none';
+
 		resultDiv.innerText = "Yay! Your birthdate is lucky. 😍";
 		resultDiv.style.backgroundColor = "#88fd97";
 	} else {
 		resultDiv.style.display = 'block';
+
+		happyAnimationsDiv.style.display = 'none';
+		sadAnimationsDiv.style.display = 'block';
 
 		resultDiv.innerText = "OOPS! Your birthdate is unlucky. 😓";
 		resultDiv.style.backgroundColor = "#ff2c2c";
